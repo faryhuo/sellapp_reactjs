@@ -1,0 +1,74 @@
+    @import "../../common/stylus/mixin.styl"
+.OrderOptions
+  .order-item-header
+    position :relative
+    padding:11px 11px
+    width :100%
+    box-sizing :border-box
+    height:75px
+    border-1px(rgba(7,17,27,0.1))
+    .seller-icon
+      display :inline-block
+      vertical-align :top
+      height:40px
+      width:40px
+      margin: 0 5px;
+    .seller-name  
+      display :inline-block
+      font-size :20px
+      line-height :40px
+      font-weight :800
+      height:40px
+    .order-icon
+      display :inline-block
+      vertical-align :middle
+      line-height :40px  
+      i
+        font-size :20px
+        color:rgba(7,17,27,0.5)
+    .order-state
+        position :absolute
+        top:11px
+        right :11px
+        line-height :40px
+        color:rgba(7,17,27,0.5)
+  .order-content
+    position :relative   
+    width:100%
+    box-sizing :border-box
+    padding-right :8px  
+    .order-list-detail   
+      .order-item-detail
+        position :relative
+        padding-top:15px
+        font-size :14px
+        color:rgba(7,17,27,0.5)
+        .order-text
+            padding-left :83px 
+        .order-count
+          position :absolute
+          top:15px
+          right :8px 
+  .order-info
+    text-align :right
+    padding : 12px 8px
+    font-size :12px
+    color:rgba(7,17,27,0.5)
+    border-1px(rgba(7,17,27,0.1))
+    .total
+      font-weight :800
+      color:#000
+  .order-action-btn
+    height :53px
+    text-align:right
+    button
+      text-align :center
+      width:85px
+      height :35px
+      margin:9px 9px 9px 0
+    .btn-again
+      background :#fff
+      border:1px solid rgba(7,17,27,0.3)  
+    .btn-comment
+      background :rgb(248,211,115)
+      border:1px solid rgb(248,211,115) 
