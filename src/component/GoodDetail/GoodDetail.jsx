@@ -8,10 +8,10 @@ import Split from 'component/Split/Split.jsx';
 
 import { observer } from 'mobx-react';
 import RatingStore from 'store/RatingStore.js';
+
 import BScroll from 'better-scroll';
 
 let ratingStore = new RatingStore();
-
 @observer
 class GoodDetail extends React.Component {
     constructor(props) {
@@ -23,7 +23,7 @@ class GoodDetail extends React.Component {
     }
     componentWillMount() {
     }
-    componentDidMount(){
+    componentDidMount() {
         this.initScroll();
     }
     componentWillUpdate() {
@@ -39,7 +39,7 @@ class GoodDetail extends React.Component {
         }, 0)
     }
 
-    hidePage(){
+    hidePage() {
         this.props.store.setIsShowDetailPage(false);
     }
 
@@ -51,7 +51,7 @@ class GoodDetail extends React.Component {
                 <div className="food-content">
                     <div className="image-header">
                         <img src={this.food.image} alt="" />
-                        <div className="back" onClick={(e)=>{this.hidePage(e)}}>
+                        <div className="back" onClick={(e) => { this.hidePage(e) }}>
                             <i className="icon-arrow_lift"></i>
                         </div>
                     </div>
@@ -65,13 +65,15 @@ class GoodDetail extends React.Component {
                             <span className="now">￥{this.food.price}</span>
                             {this.food.oldPrice && <span className="old">￥{this.food.oldPrice}</span>}
                         </div>
+                        {this.food.count>0 &&
 
                         <div className="cartcontrol-wrapper">
-                            <CartControl cart={this.food} />
-                        </div>
-                        <div className="buy" >
+                            <CartControl cart={this.food} store={this.props.shopCartStore} />
+                        </div>}
+                        {this.food.count===0 &&
+                        <div className="buy" onClick={(e) => { this.props.shopCartStore.addFood(this.food) }} >
                             加入购物车
-                </div>
+                </div>}
                     </div >
                     {this.food.info && <Split ></Split>}
                     {this.food.info && <div className="info" >

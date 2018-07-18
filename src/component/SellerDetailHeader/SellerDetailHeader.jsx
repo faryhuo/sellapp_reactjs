@@ -2,6 +2,9 @@ import React from 'react';
 
 import 'component/SellerDetailHeader/SellerDetailHeader.styl'
 
+import BulletinDetail from 'component/BulletinDetail/BulletinDetail.jsx'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; 
+
 class SellerDetailHeader extends React.Component{
     constructor(props){
         super(props);
@@ -12,8 +15,18 @@ class SellerDetailHeader extends React.Component{
             3:"invoice",
             4:"special"
         }
+        this.state={
+            isShowBulletin:false
+        }
         this.seller=this.props.store.data;
     }
+    hideDetail(){
+        this.setState({isShowBulletin:false});
+    }
+    showDetail(){
+        this.setState({isShowBulletin:true});
+    }
+
     componentWillMount(){
     }
     render(){
@@ -41,7 +54,7 @@ class SellerDetailHeader extends React.Component{
                             }
                     </div>
                     {
-                    this.seller.supports?<div className="support-count" >
+                    this.seller.supports?<div className="support-count" onClick={(e)=>{this.showDetail(e)}} >
                         <span className="count">
                             {this.seller.supports.length}个
                             <i className="icon-keyboard_arrow_right"></i>
@@ -55,7 +68,14 @@ class SellerDetailHeader extends React.Component{
                 </div>
                 <div className="background">
                     <img src={this.seller.avatar} width="100%" height="100%"/>
-                </div>       
+                </div>      
+                {this.state.isShowBulletin && 
+                <ReactCSSTransitionGroup
+                    transitionName="slide-fade"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}>               
+                        <BulletinDetail seller={this.seller} hideDetail={this.hideDetail.bind(this)} classMap={this.classMap} />
+                </ReactCSSTransitionGroup>}
             </div>
         );
     }

@@ -115,8 +115,8 @@ class GoodList extends React.Component {
                   <h1 className="title">{item.name}</h1>
                   <ul>
                     {item.foods.map((food, foodIndex) => {
-                      return <li  onClick={(e)=>{this.selectedFood(food)}}  className="food-item border-1px" key={foodIndex}>
-                        <div className="icon"><img src={food.icon} width="100%" height="100%" alt="" /></div>
+                      return <li   className="food-item border-1px" key={foodIndex}>
+                        <div className="icon" onClick={(e)=>{this.selectedFood(food)}} ><img src={food.icon} width="100%" height="100%" alt="" /></div>
                         <div className="content">
                           <h2 className="name">{food.name}</h2>
                           <p className="desc">{food.description}</p>

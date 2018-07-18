@@ -39,7 +39,7 @@ class Good extends React.Component{
                     <GoodList store={goodListStore}  shopCartStore={shopCartStore} />
                     <ShopCart store={shopCartStore} deliveryPrice="20" minPrice="20" />
                 </div>
-                {goodListStore.isShowDetailPage && <GoodDetail store={goodListStore} />}
+                {goodListStore.isShowDetailPage && <GoodDetail store={goodListStore} shopCartStore={shopCartStore}/>}
             </div>
         );
     }
