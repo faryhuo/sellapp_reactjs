@@ -7,7 +7,7 @@ import GoodList from 'component/GoodList/GoodList.jsx'
 
 import SellerDetailMenu from  'component/SellerDetailMenu/SellerDetailMenu.jsx'
 import ShopCart from  'component/ShopCart/ShopCart.jsx'
-import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
+import { Route,Switch} from 'react-router-dom';
 
 
 import GoodListStore from 'store/GoodListStore.js'

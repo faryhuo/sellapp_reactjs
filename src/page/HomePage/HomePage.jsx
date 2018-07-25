@@ -8,7 +8,7 @@ import OrderList from 'page/OrderList/OrderList.jsx'
 
 import 'page/HomePage/HomePage.styl'
 
-import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
+import {Route,Switch} from 'react-router-dom';
 
 class HomePage extends React.Component{
     constructor(props){

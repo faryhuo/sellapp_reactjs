@@ -8,17 +8,17 @@ import SellerDetail from 'page/SellerDetail/SellerDetail.jsx';
 
 import '@/common/stylus/index.styl';
 
-import {BrowserRouter as Router, Route,Switch,Redirect} from 'react-router-dom';
+import {HashRouter as Router, Route,Switch,Redirect } from 'react-router-dom';
 
 class App extends React.Component{
     render(){
         return (
-            <div id="App_Conponent">
-                <Router>
+            <div id="App_Conponent" >
+                <Router  >
                      <Switch>
-                        <Route  path="SellerList" component={HomePage}></Route>
-                        <Route  path="Detail" exect component={SellerDetail}></Route>
-                        <Redirect path="" to={{pathname: 'SellerList'}} />
+                        <Route  path="/SellerList" component={HomePage}></Route>
+                        <Route  path="/Detail" exect component={SellerDetail}></Route>
+                        <Redirect path="/" to={{pathname: '/SellerList/home'}} />
 
                     </Switch>
                </Router>

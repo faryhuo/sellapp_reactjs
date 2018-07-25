@@ -1,7 +1,7 @@
 import React from 'react';
 
 import 'component/HomeMenu/HomeMenu.styl'
-import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
+import { Route, NavLink} from 'react-router-dom';
 
 class HomeMenu extends React.Component{
     constructor(props){
