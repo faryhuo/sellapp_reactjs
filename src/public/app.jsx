@@ -16,9 +16,9 @@ class App extends React.Component{
             <div id="App_Conponent">
                 <Router>
                      <Switch>
-                        <Route  path="/SellerList" component={HomePage}></Route>
-                        <Route  path="/Detail" exect component={SellerDetail}></Route>
-                        <Redirect path="/" to={{pathname: '/SellerList'}} />
+                        <Route  path="SellerList" component={HomePage}></Route>
+                        <Route  path="Detail" exect component={SellerDetail}></Route>
+                        <Redirect path="" to={{pathname: 'SellerList'}} />
 
                     </Switch>
                </Router>
