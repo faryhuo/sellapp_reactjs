@@ -21,7 +21,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: WEBPACK_ENV === 'dev' 
-            ? '/dist/' : '/dist/',
+            ? '/dist/' : '/sellapp/',
         filename: 'js/[name].js'
     },
     resolve: {
