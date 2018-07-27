@@ -123,7 +123,7 @@ module.exports = {
         })
 
     ],
-    devtool: '#eval-source-map',//'cheap-module-eval-source-map',
+    devtool: process.env.WEBPACK_ENV=="online"?false:'#eval-source-map',//'cheap-module-eval-source-map',
     devServer: {
         clientLogLevel: 'warning',
         quiet: true, // necessary for FriendlyErrorsPlugin
