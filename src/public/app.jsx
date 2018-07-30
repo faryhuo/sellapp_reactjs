@@ -6,6 +6,7 @@ import ReactDOM         from 'react-dom';
 import HomePage from 'page/HomePage/HomePage.jsx';
 import SellerDetail from 'page/SellerDetail/SellerDetail.jsx';
 
+//import  'material-design-icons/iconfont/material-icons.css';
 import '@/common/stylus/index.styl';
 
 import {HashRouter as Router, Route,Switch,Redirect } from 'react-router-dom';

@@ -92,7 +92,7 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 8192,
+                            limit: 48192,
                             name: 'resource/[name].[ext]'
                         }
                     }
