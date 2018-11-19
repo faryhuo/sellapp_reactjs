@@ -20,9 +20,12 @@ class SellerListOption extends React.Component{
     }
     componentWillMount(){
     }
+    viewDetail(){
+        location.href="#/Detail/goods"
+    }
     render(){
         return (
-            <div className="SellerListOptions border-1px" click="viewDetail">
+            <div className="SellerListOptions border-1px" onClick={(e)=>{this.viewDetail()}}>
             <div className="options-wrapper">
                  <div className="left-content">
                      <div className="image">

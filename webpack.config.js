@@ -44,7 +44,8 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: ['env','react',"latest","mobx"],
-                        plugins: [/*"transform-runtime"*/]
+                        plugins: [/*"transform-runtime"*/
+                        ["import", { "libraryName": "antd-mobile", "style": "css" }] ]
                     }
                 }
             },
@@ -123,10 +124,10 @@ module.exports = {
         })
 
     ],
-    devtool: process.env.WEBPACK_ENV=="online"?false:'#eval-source-map',//'cheap-module-eval-source-map',
+    devtool: process.env.WEBPACK_ENV=="online"?false:'#cheap-module-eval-source-map',//'cheap-module-eval-source-map',
     devServer: {
         clientLogLevel: 'warning',
-        quiet: true, // necessary for FriendlyErrorsPlugin
+        //quiet: true, // necessary for FriendlyErrorsPlugin
         port: 8080,
         host: '0.0.0.0', 
         watchOptions: {

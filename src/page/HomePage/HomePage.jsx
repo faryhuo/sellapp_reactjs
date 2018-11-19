@@ -22,8 +22,8 @@ class HomePage extends React.Component{
     }
     render(){
         return (
-                <div className="HomePage">
-                    <div className="contentWrapper">
+                <div className="HomePage" >
+                    <div className="contentWrapper"  style={{background:"#fff"}}>
                             <Route  path={this.props.match.url+"/home"} exact component={SellerPage}></Route>
                             <Route  path={this.props.match.url+"/order"} exact component={OrderList}></Route>
                     </div>

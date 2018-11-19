@@ -16,6 +16,7 @@ import ShopCartStore from 'store/ShopCartStore.js'
 
 import Good from  'page/SellerDetail/Good/Good.jsx'
 import Rating from './Rating/Rating.jsx';
+import Seller from './Seller/Seller.jsx';
 
 let goodListStore=new GoodListStore();
 
@@ -51,7 +52,11 @@ class SellerDetail extends React.Component{
                             <Rating store={sellerDetailStore}/>
                           )}>
                          </Route> 
-
+                         <Route  path={this.props.match.url+"/seller"} exact
+                         render={(props) => (
+                            <Seller store={sellerDetailStore}/>
+                          )}>
+                         </Route> 
                     </Switch>
                 </Route>
             </div>

@@ -46,7 +46,7 @@ class Star extends React.Component{
 
     render(){
         return (
-            <div className={"Star "+this.state.starType}>
+            <div {...this.props} className={"Star "+this.state.starType} >
                     {this.state.itemClasses.map((itemClass,i) => {
                       return <span  key={i} className={"star-item "+itemClass}></span>
                     })}
