@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Seller.styl';
-import ClassNames from 'classNames';
+import ClassNames from 'classnames';
 import Star from 'component/Star/Star.jsx';
 import Split from 'component/Split/Split.jsx';
 import BScroll from 'better-scroll';
