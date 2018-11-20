@@ -128,7 +128,7 @@ module.exports = {
     devServer: {
         clientLogLevel: 'warning',
         //quiet: true, // necessary for FriendlyErrorsPlugin
-        port: 8080,
+        port: 80,
         host: '0.0.0.0', 
         watchOptions: {
           poll: false
@@ -148,12 +148,6 @@ module.exports = {
                 data: jsonData.accountList
               })
             })
-            app.get("/api/getInstrunmentList", function (req, res) {
-                res.json({
-                  status: 0,
-                  data: jsonData.instrunmentList
-                })
-            });
         },
         proxy : {
         }
