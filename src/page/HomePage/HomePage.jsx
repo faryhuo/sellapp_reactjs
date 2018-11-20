@@ -5,6 +5,7 @@ import HomeMenu from 'component/HomeMenu/HomeMenu.jsx'
 
 import SellerPage from 'page/SellerPage/SellerPage.jsx'
 import OrderList from 'page/OrderList/OrderList.jsx'
+import User from 'page/User/User.jsx'
 
 import 'page/HomePage/HomePage.styl'
 
@@ -23,9 +24,11 @@ class HomePage extends React.Component{
     render(){
         return (
                 <div className="HomePage" >
-                    <div className="contentWrapper"  style={{background:"#fff"}}>
+                    <div className="contentWrapper" >
                             <Route  path={this.props.match.url+"/home"} exact component={SellerPage}></Route>
                             <Route  path={this.props.match.url+"/order"} exact component={OrderList}></Route>
+                            <Route  path={this.props.match.url+"/user"} exact component={User}></Route>
+
                     </div>
                     <div className="footerWarpper">
                           <HomeMenu match={this.props.match}/>

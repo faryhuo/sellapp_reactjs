@@ -1,7 +1,7 @@
 import React from 'react';
 import 'component/SellerFilter/SellerFilter.styl';
 import SellerListStore from 'store/SellerListStore.js';
-import classNames from 'classnames';
+import ClassNames from 'classnames';
 
 import {observer} from 'mobx-react';
 
@@ -15,7 +15,7 @@ class SellerFilter extends React.Component{
     }
 
     getItemClass(type){
-       return classNames("menu-item",{"active":(this.props.SellerListStore.filterType===type)});
+       return ClassNames("menu-item",{"active":(this.props.SellerListStore.filterType===type)});
     }
 
     changeFilterType(type){

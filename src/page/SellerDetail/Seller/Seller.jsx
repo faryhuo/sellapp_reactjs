@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Seller.styl';
-import classNames from 'classNames';
+import ClassNames from 'classNames';
 import Star from 'component/Star/Star.jsx';
 import Split from 'component/Split/Split.jsx';
 import BScroll from 'better-scroll';
@@ -102,9 +102,9 @@ class Seller extends React.Component {
                                 seller.supports &&
                                 <ul className="supports">
                                     {
-                                        seller.supports.map((item) => {
-                                            return <li className="support-item border-1px" >
-                                                <span className={classNames("icon", this.state.descType[item.type])}></span>
+                                        seller.supports.map((item,index) => {
+                                            return <li key={index} className="support-item border-1px" >
+                                                <span className={ClassNames("icon", this.state.descType[item.type])}></span>
                                                 <span className="text">{item.description}</span>
                                             </li>;
                                         })
@@ -119,8 +119,8 @@ class Seller extends React.Component {
                             <div className="pic-wrapper" ref="picWrapper">
                                 <ul className="pic-list" ref="picList">
                                     {
-                                        seller.pics.map((pic) => {
-                                            return <li className="pic-item">
+                                        seller.pics.map((pic,index) => {
+                                            return <li key={index} className="pic-item">
                                                 <img src={pic} width="120" height="90" alt="" />
                                             </li>
                                         })
@@ -134,8 +134,8 @@ class Seller extends React.Component {
                                 <h1 className="title">商家信息</h1>
                                 <ul>
                                     {
-                                        seller.infos.map((info) => {
-                                            return <li className="info-item">
+                                        seller.infos.map((info,index) => {
+                                            return <li key={index}  className="info-item">
                                                 {info}
                                             </li>;
                                         })

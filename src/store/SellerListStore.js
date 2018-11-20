@@ -1,5 +1,5 @@
 import {observable, computed, action } from "mobx";
-
+import Axios from "axios";
 
 class SellerListStore{
   static filterType={
@@ -120,6 +120,32 @@ class SellerListStore{
       "text":"折扣商品5.31折起"
     }]
   }];
+/*
+id": 1,
+"name": "name",
+"description": null,
+"deliveryTime": 30,
+"score": 4.5,
+"serviceScore": 4.5,
+"foodScore": 4.5,
+"rankRate": null,
+"minPrice": 20,
+"averagePrice": 25,
+"deliveryPrice": 5,
+"ratingCount": null,
+"sellCount": 4358,
+"bulletin": null,
+"icon": "http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg",
+"createTime": 1533095571000,
+"updateTime": 1533095571000
+*/
+  constructor(){
+    // Axios.get("http://119.23.106.55:8081/api/Seller/getSellerList").then((rep)=>{
+    //   console.log(rep.data.data.list)
+    //   this.data=rep.data.data.list;
+    // });
+  }
+
 
   @computed
   get sellerList(){
@@ -130,6 +156,7 @@ class SellerListStore{
           return this.filterType>i;
         })
     }
+    
   }
 
   @computed

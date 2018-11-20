@@ -1,0 +1,60 @@
+  @import "../../common/stylus/mixin.styl"
+
+ .User
+   .header
+     width :100%
+     .title
+       display :block
+       height:30px
+       font-size :20px
+       line-height :30px
+       text-align:center
+   .userInfo  
+     display :flex
+     height :73px
+     width:100%  
+     margin-bottom :22px
+     margin-top :20px
+     .icon
+       flex :0 0 60px 
+       height:60px
+       width:60px
+       margin:6.5px 14px
+       border-radius :60px
+       border:1px solid #f2f2f2
+     .info
+       flex:1
+       height:60px
+       margin:6.5px 0
+       .username
+         height :30px
+         line-height :24px
+         font-size :22px
+         font-weight :400
+       .phoneNum
+          height :30px
+          line-height :20px  
+   .money,.collectGoodsPosition,.servicePhone
+     width:100%
+     height:35px
+     margin-bottom :13px
+     position :relative
+     border-1px(rgba(7,17,27,0.1))
+     .icon
+       display :inline-block
+       vertical-align :middle
+       margin auto 10px
+     .text
+       display :inline-block
+       vertical-align :middle
+       font-size :16px
+       line-height :24px  
+   .servicePhone   
+     .serviceTime
+       font-size :12px
+       color:#999999
+   .logout 
+     margin-top :24px
+     width :100%
+     text-align :center
+     font-size :18px   

@@ -52,6 +52,7 @@ class SellerListOption extends React.Component{
                              <div className="averagePrice">人均 ￥{this.props.Seller.averagePrice}</div>
                              <div className="icon">iCON</div>
                      </div>
+                     {this.props.Seller.desc &&
                      <div className="desc-wrapper">
                          <ul className="desc-list">
                            {
@@ -64,6 +65,7 @@ class SellerListOption extends React.Component{
                            }
                          </ul>
                      </div>
+                     }
                  </div>
             </div>
         </div>

@@ -13,45 +13,46 @@ import BScroll from 'better-scroll';
 
 import SellerListStore from 'store/SellerListStore.js'
 
-let sellerListStore=new SellerListStore();
+let sellerListStore = new SellerListStore();
 
-class SellerPage extends React.Component{
-    constructor(props){
+class SellerPage extends React.Component {
+    constructor(props) {
         super(props);
-        this.state={
+        this.state = {
 
         }
     }
-    componentWillMount(){
+    componentWillMount() {
     }
-    componentWillReceiveProps(){
+    componentWillReceiveProps() {
         this.initScroll();
     }
-    componentDidMount(){
+    componentDidMount() {
         this.initScroll();
     }
-    initScroll(){
-        setTimeout(()=>{
-         if(!this.state.contentWapperScroll){
-           this.state.contentWapperScroll=new BScroll(this.refs.scrollContentWrapper
-           ,{useTransition:true,click:true,probeType:3});
-         }else{
-           this.state.contentWapperScroll.refresh();
-         }
-        },0);
+    initScroll(callback) {
+        setTimeout(() => {
+            if (!this.state.contentWapperScroll) {
+                this.state.contentWapperScroll = new BScroll(this.refs.scrollContentWrapper
+                    , { useTransition: true, click: true, probeType: 3 });
+            } else {
+                this.state.contentWapperScroll.refresh();
+            }
+            callback && callback(this.state.contentWapperScroll);
+        }, 0);
     }
-    render(){
+    render() {
         return (
             <div className="SellerPage">
-               <Title title="外卖APP"/>
-               <SellerSearch SellerListStore={sellerListStore}/>
-               <div className="scrollContentWrapper" ref="scrollContentWrapper">
-                  <div>
-                    <CategoryMenu/>
-                    <Split/>
-                    <SellerList SellerListStore={sellerListStore}/>
-                   </div> 
-               </div>
+                <Title title="外卖APP" />
+                <SellerSearch SellerListStore={sellerListStore} />
+                <div className="scrollContentWrapper" ref="scrollContentWrapper">
+                    <div>
+                        <CategoryMenu />
+                        <Split />
+                        <SellerList SellerListStore={sellerListStore} initScroll={(callback)=>{this.initScroll(callback)}}/>
+                    </div>
+                </div>
             </div>
         );
     }
