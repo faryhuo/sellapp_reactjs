@@ -1,6 +1,16 @@
 {
     "compilerOptions": {
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
-    }
+        "emitDecoratorMetadata": true,
+        "baseUrl": ".",
+        "paths": {
+            "page/*": ["src/page/*"],
+            "common/*": ["src/common/*"],
+            "component/*": ["src/component/*"],
+            "store/*": ["src/store/*"],
+            "@/*": ["src/*"]
+        }
+    },
+    "exclude": ["node_modules", "dist"],
+    "include": ["src"]
 }

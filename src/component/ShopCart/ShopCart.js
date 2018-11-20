@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'component/ShopCart/ShopCart.styl'
 
-import CartControl from 'component/CartControl/CartControl.jsx'
+import CartControl from 'component/CartControl/CartControl.js'
 import { observer } from 'mobx-react';
 import BScroll from 'better-scroll';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'component/RatingContent/RatingContent.styl'
 import { observer } from 'mobx-react';
-import Star from 'component/Star/Star.jsx';
+import Star from 'component/Star/Star.js';
 
 import * as DateOperator from '@/common/js/date.js';
 

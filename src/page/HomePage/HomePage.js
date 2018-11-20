@@ -1,11 +1,11 @@
 import React from 'react';
 
-import HomeMenu from 'component/HomeMenu/HomeMenu.jsx'
+import HomeMenu from 'component/HomeMenu/HomeMenu.js'
 
 
-import SellerPage from 'page/SellerPage/SellerPage.jsx'
-import OrderList from 'page/OrderList/OrderList.jsx'
-import User from 'page/User/User.jsx'
+import SellerPage from 'page/SellerPage/SellerPage.js'
+import OrderList from 'page/OrderList/OrderList.js'
+import User from 'page/User/User.js'
 
 import 'page/HomePage/HomePage.styl'
 

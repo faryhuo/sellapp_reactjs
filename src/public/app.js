@@ -3,8 +3,8 @@ import 'babel-polyfill'
 import React            from 'react';
 import ReactDOM         from 'react-dom';
 
-import HomePage from 'page/HomePage/HomePage.jsx';
-import SellerDetail from 'page/SellerDetail/SellerDetail.jsx';
+import HomePage from 'page/HomePage/HomePage.js';
+import SellerDetail from 'page/SellerDetail/SellerDetail.js';
 
 
 import '@/common/stylus/index.styl';

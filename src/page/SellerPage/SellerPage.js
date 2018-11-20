@@ -2,12 +2,12 @@ import React from 'react';
 
 import 'page/SellerPage/SellerPage.styl';
 
-import Title from 'component/Title/Title.jsx';
-import SellerSearch from 'component/SellerSearch/SellerSearch.jsx';
-import CategoryMenu from 'component/CategoryMenu/CategoryMenu.jsx';
-import Split from 'component/Split/Split.jsx';
+import Title from 'component/Title/Title.js';
+import SellerSearch from 'component/SellerSearch/SellerSearch.js';
+import CategoryMenu from 'component/CategoryMenu/CategoryMenu.js';
+import Split from 'component/Split/Split.js';
 
-import SellerList from 'component/SellerList/SellerList.jsx';
+import SellerList from 'component/SellerList/SellerList.js';
 
 import BScroll from 'better-scroll';
 
@@ -21,6 +21,7 @@ class SellerPage extends React.Component {
         this.state = {
 
         }
+        
     }
     componentWillMount() {
     }

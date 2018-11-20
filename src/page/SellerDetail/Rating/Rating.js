@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Rating.styl'
-import RatingSelect from 'component/RatingSelect/RatingSelect.jsx';
-import RatingContent from 'component/RatingContent/RatingContent.jsx';
+import RatingSelect from 'component/RatingSelect/RatingSelect.js';
+import RatingContent from 'component/RatingContent/RatingContent.js';
 
-import Split from 'component/Split/Split.jsx';
-import Star from 'component/Star/Star.jsx';
+import Split from 'component/Split/Split.js';
+import Star from 'component/Star/Star.js';
 import RatingStore from 'store/RatingStore.js'
 
 import * as DateOperator from '@/common/js/date.js';

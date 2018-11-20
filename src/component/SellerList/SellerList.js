@@ -3,8 +3,8 @@ import React from 'react';
 import 'component/SellerList/SellerList.styl';
 
 
-import SellerFilter from 'component/SellerFilter/SellerFilter.jsx';
-import SellerListOption from 'component/SellerListOption/SellerListOption.jsx';
+import SellerFilter from 'component/SellerFilter/SellerFilter.js';
+import SellerListOption from 'component/SellerListOption/SellerListOption.js';
 import img from './img/rolling.svg';
 import { observer } from 'mobx-react';
 

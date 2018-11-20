@@ -2,8 +2,8 @@ import React from 'react';
 
 import './Seller.styl';
 import ClassNames from 'classnames';
-import Star from 'component/Star/Star.jsx';
-import Split from 'component/Split/Split.jsx';
+import Star from 'component/Star/Star.js';
+import Split from 'component/Split/Split.js';
 import BScroll from 'better-scroll';
 
 class Seller extends React.Component {

@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'component/SellerListOption/SellerListOption.styl'
 
-import Star from 'component/Star/Star.jsx';
+import Star from 'component/Star/Star.js';
 
 
 class SellerListOption extends React.Component{

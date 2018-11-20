@@ -1,12 +1,12 @@
 import React from 'react';
 
 import 'page/SellerDetail/SellerDetail.styl'
-import SellerDetailHeader from 'component/SellerDetailHeader/SellerDetailHeader.jsx'
-import GoodList from 'component/GoodList/GoodList.jsx'
+import SellerDetailHeader from 'component/SellerDetailHeader/SellerDetailHeader.js'
+import GoodList from 'component/GoodList/GoodList.js'
 
 
-import SellerDetailMenu from  'component/SellerDetailMenu/SellerDetailMenu.jsx'
-import ShopCart from  'component/ShopCart/ShopCart.jsx'
+import SellerDetailMenu from  'component/SellerDetailMenu/SellerDetailMenu.js'
+import ShopCart from  'component/ShopCart/ShopCart.js'
 import { Route,Switch} from 'react-router-dom';
 
 
@@ -14,9 +14,9 @@ import GoodListStore from 'store/GoodListStore.js'
 import SellerDetailStore from 'store/SellerDetailStore.js'
 import ShopCartStore from 'store/ShopCartStore.js'
 
-import Good from  'page/SellerDetail/Good/Good.jsx'
-import Rating from './Rating/Rating.jsx';
-import Seller from './Seller/Seller.jsx';
+import Good from  'page/SellerDetail/Good/Good.js'
+import Rating from './Rating/Rating.js';
+import Seller from './Seller/Seller.js';
 
 let goodListStore=new GoodListStore();
 

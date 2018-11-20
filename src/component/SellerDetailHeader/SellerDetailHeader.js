@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'component/SellerDetailHeader/SellerDetailHeader.styl'
 
-import BulletinDetail from 'component/BulletinDetail/BulletinDetail.jsx'
+import BulletinDetail from 'component/BulletinDetail/BulletinDetail.js'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class SellerDetailHeader extends React.Component {

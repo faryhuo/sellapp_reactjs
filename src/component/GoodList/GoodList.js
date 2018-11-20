@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'component/GoodList/GoodList.styl'
 
-import CartControl from  'component/CartControl/CartControl.jsx'
+import CartControl from  'component/CartControl/CartControl.js'
 
 import BScroll from 'better-scroll';
 import {observer} from 'mobx-react';

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import 'component/GoodDetail/GoodDetail.styl'
-import RatingSelect from 'component/RatingSelect/RatingSelect.jsx';
-import RatingContent from 'component/RatingContent/RatingContent.jsx';
-import CartControl from 'component/CartControl/CartControl.jsx';
-import Split from 'component/Split/Split.jsx';
+import RatingSelect from 'component/RatingSelect/RatingSelect.js';
+import RatingContent from 'component/RatingContent/RatingContent.js';
+import CartControl from 'component/CartControl/CartControl.js';
+import Split from 'component/Split/Split.js';
 
 import { observer } from 'mobx-react';
 import RatingStore from 'store/RatingStore.js';

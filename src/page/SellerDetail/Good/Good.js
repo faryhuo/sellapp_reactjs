@@ -1,9 +1,9 @@
 import React from 'react';
 
 import './Good.styl'
-import GoodList from 'component/GoodList/GoodList.jsx'
-import ShopCart from  'component/ShopCart/ShopCart.jsx'
-import GoodDetail from  'component/GoodDetail/GoodDetail.jsx'
+import GoodList from 'component/GoodList/GoodList.js'
+import ShopCart from  'component/ShopCart/ShopCart.js'
+import GoodDetail from  'component/GoodDetail/GoodDetail.js'
 
 
 import GoodListStore from 'store/GoodListStore.js'

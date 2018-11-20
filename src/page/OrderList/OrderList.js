@@ -1,8 +1,8 @@
 import React from 'react';
 
 import 'page/OrderList/OrderList.styl'
-import Title from 'component/Title/Title.jsx'
-import OrderOptions from 'component/OrderOptions/OrderOptions.jsx'
+import Title from 'component/Title/Title.js'
+import OrderOptions from 'component/OrderOptions/OrderOptions.js'
 import BScroll from 'better-scroll';
 
 class OrderList extends React.Component{

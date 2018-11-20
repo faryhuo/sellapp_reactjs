@@ -15,8 +15,8 @@ let WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 console.log(WEBPACK_ENV); 
 module.exports = {
     entry: {
-        index:'./src/public/app.jsx',
-        login:'./src/public/login.jsx'
+        index:'./src/public/app.js',
+        login:'./src/public/login.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -28,9 +28,8 @@ module.exports = {
         alias : {
             page        : path.resolve(__dirname, 'src/page'),
             component   : path.resolve(__dirname, 'src/component'),
-            util        : path.resolve(__dirname, 'src/util'),
             store        : path.resolve(__dirname, 'src/store'),
-            service     : path.resolve(__dirname, 'src/service'),
+            common        : path.resolve(__dirname, 'src/common'),
             "@"          :path.resolve(__dirname, 'src')
         }
     },
@@ -128,7 +127,7 @@ module.exports = {
     devServer: {
         clientLogLevel: 'warning',
         //quiet: true, // necessary for FriendlyErrorsPlugin
-        port: 80,
+        port: 8080,
         host: '0.0.0.0', 
         watchOptions: {
           poll: false

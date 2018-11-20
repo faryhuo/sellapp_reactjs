@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'component/BulletinDetail/BulletinDetail.styl'
-import Star from 'component/Star/Star.jsx';
+import Star from 'component/Star/Star.js';
 
 class BulletinDetail extends React.Component{
     constructor(props){
