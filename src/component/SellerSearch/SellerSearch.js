@@ -10,7 +10,11 @@ class SellerSearch extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            position:""
+            position:"China"
+        }
+        let position= localStorage.getItem("position",position);
+        if(position){
+            this.state.position=position;
         }
     }
     componentWillMount(){
@@ -20,11 +24,8 @@ class SellerSearch extends React.Component{
         let geoc = new BMap.Geocoder();    
         let self=this;
 
-
+        if(!self.state.position || self.state.position==="China"){
         geolocation.getCurrentPosition(function (r) {
-            if(self.state.position){
-                return;
-            }
             if (this.getStatus() == BMAP_STATUS_SUCCESS) {
                 let pt = r.point;
                 console.log(r)
@@ -37,6 +38,7 @@ class SellerSearch extends React.Component{
                         position=addComp.city?addComp.city:addComp.province;
                     }
                     self.setState({position:position});
+                    localStorage.setItem("position",position);
                 });   
             } else {
                 self.setState({position:"China"});
@@ -45,6 +47,7 @@ class SellerSearch extends React.Component{
         }, {
             enableHighAccuracy: true
         })
+        }
     }
 
     search(event){
@@ -60,7 +63,7 @@ class SellerSearch extends React.Component{
                         <div className="icon">
                         <i className="material-icons">place</i>
                         </div>
-                        <div className="text">{this.state.position?this.state.position:"China"}</div>
+                        <div className="text">{this.state.position}</div>
                         <div className="icon">
                         <i className="material-icons">keyboard_arrow_right</i>
                         </div>
