@@ -15,8 +15,8 @@ import SellerDetailStore from 'store/SellerDetailStore.js'
 import ShopCartStore from 'store/ShopCartStore.js'
 
 import Good from  'page/SellerDetail/Good/Good.js'
-import Rating from './Rating/Rating.js';
-import Seller from './Seller/Seller.js';
+import Rating from 'page/SellerDetail/Rating/Rating.js';
+import Seller from 'page/SellerDetail/Seller/Seller.js';
 
 let goodListStore=new GoodListStore();
 
