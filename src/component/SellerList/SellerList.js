@@ -7,6 +7,7 @@ import SellerFilter from 'component/SellerFilter/SellerFilter.js';
 import SellerListOption from 'component/SellerListOption/SellerListOption.js';
 import img from './img/rolling.svg';
 import { observer } from 'mobx-react';
+import GlobalObject from 'common/js/GlobalObject.js';
 
 @observer
 class SellerList extends React.Component {
@@ -19,6 +20,21 @@ class SellerList extends React.Component {
             isReload:false
         }
     }
+
+    getSelectedCountBySellerId(id){
+        let dataSource=GlobalObject["dataSource"];
+        let store=dataSource["SellerDetail__" + id];
+        console.log(store);
+        if(!store){
+            return ;
+        }
+        let shopCartStore=store.shopCartStore;
+        if(!shopCartStore){
+            return;
+        }
+        return shopCartStore.totalCount;
+    }
+
     componentWillMount() {
         this.props.initScroll();
     }
@@ -59,6 +75,10 @@ class SellerList extends React.Component {
         });
        
     }
+
+
+
+
     render() {
         return (
             <div className="SellerList">
@@ -78,7 +98,7 @@ class SellerList extends React.Component {
                     <ul>
                         {this.props.SellerListStore.sellerList.map((Seller, i) => {
                             return <li key={i} className="seller-list-item">
-                                <SellerListOption Seller={Seller} />
+                                <SellerListOption Seller={Seller} selectedCount={this.getSelectedCountBySellerId(Seller.id)} />
                             </li>
                         })}
                     </ul>

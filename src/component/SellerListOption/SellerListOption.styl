@@ -6,14 +6,29 @@
      width:100%
      background :#fff
      border-1px(rgba(7,17,27,0.1))
+
      .options-wrapper
        display :flex
        .left-content
          flex :0 0 104px
          .image
+           position : relative
            width:85px
            height :62px
-           margin 0 9px          
+           margin 0 9px
+           .selctedCount
+            border: 1px solid #f00;
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            font-size: 3px
+            line-height: 10px
+            text-align: center
+            background: red
+            color: #fff
+            position: absolute
+            right: -5px
+            bottom: -5px           
        .right-content
          flex :1
          >.header
