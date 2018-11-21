@@ -15,6 +15,34 @@ class SellerSearch extends React.Component{
     }
     componentWillMount(){
     }
+    componentDidMount(){
+        
+    let geolocation = new BMap.Geolocation();
+    let geoc = new BMap.Geocoder();    
+    let self=this;
+
+
+    geolocation.getCurrentPosition(function (r) {
+        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+            let pt = r.point;
+            console.log(r)
+            geoc.getLocation(pt, function(rs){
+                console.log(rs)
+                let addComp = rs.addressComponents;
+			    //alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+                let position=addComp.street?addComp.street:addComp.district;
+                if(!position){
+                    position=addComp.city?addComp.city:addComp.province;
+                }
+                self.setState({position:position});
+            });   
+        } else {
+            alert('failed' + this.getStatus());
+        }
+    }, {
+        enableHighAccuracy: true
+    })
+    }
 
     search(event){
         if(event.key==="Enter"){
