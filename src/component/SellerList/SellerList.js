@@ -24,7 +24,6 @@ class SellerList extends React.Component {
     getSelectedCountBySellerId(id){
         let dataSource=GlobalObject["dataSource"];
         let store=dataSource["SellerDetail__" + id];
-        console.log(store);
         if(!store){
             return ;
         }

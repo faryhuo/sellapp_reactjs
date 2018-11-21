@@ -31,7 +31,7 @@ class SellerListOption extends React.Component {
                     <div className="left-content">
                         <div className="image">
                             <img width="100%" height="100%" src={this.props.Seller.icon}></img>
-                            {this.props.selectedCount  && this.props.selectedCount>0 &&
+                            {(this.props.selectedCount && this.props.selectedCount>0) && 
                                 <div className="selctedCount">
                                     {this.props.selectedCount}
                                 </div>
