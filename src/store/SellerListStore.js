@@ -30,7 +30,7 @@ class SellerListStore{
       "text":"折扣商品5.31折起"
     }]
   },{
-    "id":1,
+    "id":2,
     "name":"111111",
     "icon":"http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg",
     "sellCount":4358,
@@ -45,7 +45,7 @@ class SellerListStore{
       "text":"折扣商品5.31折起"
     }]
   },{
-    "id":1,
+    "id":3,
     "name":"222222",
     "icon":"http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg",
     "sellCount":4358,
@@ -60,7 +60,7 @@ class SellerListStore{
       "text":"折扣商品5.31折起"
     }]
   },{
-    "id":1,
+    "id":4,
     "name":"333333",
     "icon":"http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg",
     "sellCount":4358,
@@ -75,7 +75,7 @@ class SellerListStore{
       "text":"折扣商品5.31折起"
     }]
   },{
-    "id":1,
+    "id":5,
     "name":"44444",
     "icon":"http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg",
     "sellCount":4358,
@@ -90,7 +90,7 @@ class SellerListStore{
       "text":"折扣商品5.31折起"
     }]
   },{
-    "id":1,
+    "id":6,
     "name":"55555",
     "icon":"http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg",
     "sellCount":4358,
@@ -105,7 +105,7 @@ class SellerListStore{
       "text":"折扣商品5.31折起"
     }]
   },{
-    "id":1,
+    "id":7,
     "name":"66666",
     "icon":"http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg",
     "sellCount":4358,

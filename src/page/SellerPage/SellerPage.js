@@ -21,6 +21,7 @@ class SellerPage extends React.Component {
         this.state = {
 
         }
+        document.title = "Home";
         
     }
     componentWillMount() {

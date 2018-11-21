@@ -14,6 +14,7 @@ class User extends React.Component{
               startServiceTime:"9:00",
               endServiceTime:"23:00"
         }
+        document.title = "User Information";
     }
     componentWillMount(){
     }

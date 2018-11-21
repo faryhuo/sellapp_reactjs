@@ -21,7 +21,8 @@ class SellerListOption extends React.Component{
     componentWillMount(){
     }
     viewDetail(){
-        location.href="#/Detail/goods"
+        let id=this.props.Seller.id
+        location.href=`#/Detail/${id}/goods`;
     }
     render(){
         return (

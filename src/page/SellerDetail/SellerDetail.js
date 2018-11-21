@@ -18,10 +18,8 @@ import Good from  'page/SellerDetail/Good/Good.js'
 import Rating from 'page/SellerDetail/Rating/Rating.js';
 import Seller from 'page/SellerDetail/Seller/Seller.js';
 
-let goodListStore=new GoodListStore();
 
-let sellerDetailStore=new SellerDetailStore();
-let shopCartStore=new ShopCartStore();
+let sellerDetailStore;
 
 class SellerDetail extends React.Component{
     constructor(props){
@@ -29,24 +27,31 @@ class SellerDetail extends React.Component{
         this.state={
         
         }
+        console.log(props);
+        let id=props.match.params.id;
+        sellerDetailStore=new SellerDetailStore(id);
     }
     initScroll(){
      }
     componentWillMount(){
-        document.title = "Seller Detail";
+        document.title = sellerDetailStore.data.name;
     }
     componentDidMount(){
     }
     componentWillUpdate(){
     }
     render(){
+        let id=this.props.match.params.id;
         return (
             <div className="SellerDetail">
                 <SellerDetailHeader store={sellerDetailStore}/>
                 <SellerDetailMenu match={this.props.match}/>
                 <Route>
                     <Switch>
-                        <Route  path={this.props.match.url+"/goods"} exact component={Good}></Route> 
+                        <Route  path={this.props.match.url+"/goods"} exact 
+                                                 render={(props) => (
+                                                    <Good sellerId={id}/>
+                                                  )}>></Route> 
                         <Route  path={this.props.match.url+"/ratings"} exact
                          render={(props) => (
                             <Rating store={sellerDetailStore}/>
