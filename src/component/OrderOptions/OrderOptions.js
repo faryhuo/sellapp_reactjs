@@ -32,7 +32,7 @@ class OrderOptions extends React.Component{
                     <div className="order-info border-1px">共{this.props.orderItem.goods?this.props.orderItem.goods.length:0}件商品,实付<span className="total">￥{this.props.orderItem.total}</span></div>
                 </div>
                 <div className="order-action-btn">
-                    <button className="btn-again">再来一单</button>
+                    <button className="btn-again" onClick={(e)=>{this.props.againOrder(this.props.orderItem)}}>再来一单</button>
                     <button className="btn-comment">去评论</button>                            
                 </div>
             </div>

@@ -12,7 +12,12 @@ class CartControl extends React.Component{
     }
 
     getCount(){
-        return this.props.cart.count
+        for(let i=0;i<this.props.store.selectedFoods.length;i++){
+            if(this.props.cart.name==this.props.store.selectedFoods[i].name){
+                return this.props.store.selectedFoods[i].count;
+            }
+        }
+        return 0;
     }
 
     render(){

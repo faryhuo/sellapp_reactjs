@@ -12,6 +12,9 @@ class ShopCartStore {
   
   minPrice=0
 
+  @action initSelectedFoods(food){
+    this.selectedFoods=food;
+  }
 
   @action
   setMinPrice(minPrice){
