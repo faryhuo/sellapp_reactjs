@@ -34,7 +34,6 @@
     "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
-    "animate.css": "^3.7.0",
     "antd-mobile": "^2.2.6",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
