@@ -19,7 +19,7 @@ class App extends React.Component {
                             <Route path="/SellerList" component={HomePage}></Route>
                             <Route path="/Detail/:id" component={SellerDetail}></Route>
                             <Route render={() => <div>Not Found</div>} />
-                        </Switch>F
+                        </Switch>
                     </div>
                 </Router>
             </div>
