@@ -21,6 +21,11 @@ class HomePage extends React.Component{
     componentWillReceiveProps(nextProps) {
 
     }
+
+
+    componentWillUnmount(){
+    }
+
     render(){
         return (
                 <div className="HomePage" >

@@ -24,7 +24,7 @@ let goodListStore;
 
 let shopCartStore;
 import GlobalObject from 'common/js/GlobalObject.js';
-let dataSource=GlobalObject["dataSource"];
+let dataSource = GlobalObject["dataSource"];
 
 class SellerDetail extends React.Component {
     constructor(props) {
@@ -57,30 +57,31 @@ class SellerDetail extends React.Component {
     }
     componentWillUpdate() {
     }
+
+
+
     render() {
+        console.log(this.props.match)
         let id = this.props.match.params.id;
         return (
-            <div className="SellerDetail">
+            <div className="SellerDetail" ref="SellerDetail">
                 <SellerDetailHeader store={sellerDetailStore} />
                 <SellerDetailMenu match={this.props.match} />
-                <Route>
-                    <Switch>
-                        <Route path={this.props.match.url + "/goods"} exact
-                            render={(props) => (
-                                <Good goodListStore={goodListStore} shopCartStore={shopCartStore} />
-                            )}>></Route>
-                        <Route path={this.props.match.url + "/ratings"} exact
-                            render={(props) => (
-                                <Rating store={sellerDetailStore} />
-                            )}>
-                        </Route>
-                        <Route path={this.props.match.url + "/seller"} exact
-                            render={(props) => (
-                                <Seller store={sellerDetailStore} />
-                            )}>
-                        </Route>
-                    </Switch>
+                <Route path={this.props.match.path + "/goods"}
+                    render={(props) => (
+                        <Good {...props} goodListStore={goodListStore} shopCartStore={shopCartStore} />
+                    )}></Route>
+                <Route path={this.props.match.path + "/ratings"}
+                    render={(props) => (
+                        <Rating {...props} store={sellerDetailStore} />
+                    )}>
                 </Route>
+                <Route path={this.props.match.path + "/seller"}
+                    render={(props) => (
+                        <Seller {...props} store={sellerDetailStore} />
+                    )}>
+                </Route>
+
             </div>
         );
     }

@@ -13,6 +13,7 @@
        z-index :20
        border: 1px solid #d4d6d9;
        border-radius: 50%
+       color:#fff   
        .material-icons
          width:16px
          height :16px         
@@ -112,7 +113,7 @@
           position :absolute
           top:8px
           right 12px
-          font-size :10px   
+          font-size :10px
      .background
        position :absolute       
        top:0
@@ -121,9 +122,8 @@
        height:100%
        z-index :-1
        filter:blur(10px)
-     .slide-fade-enter-active, .slide-fade-leave-active 
+     .slide-fade-leave 
        transition: all .5s ease
-     .slide-fade-enter, .slide-fade-leave-active
+     .slide-fade-leave-active
        transform: translateX(10px);
-       opacity: 0;
        background :rgba(7,17,27,0)

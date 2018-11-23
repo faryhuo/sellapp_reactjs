@@ -3,6 +3,7 @@ import React from 'react';
 import 'component/SellerListOption/SellerListOption.styl'
 
 import Star from 'component/Star/Star.js';
+import { Route, NavLink} from 'react-router-dom';
 
 
 class SellerListOption extends React.Component {
@@ -20,18 +21,20 @@ class SellerListOption extends React.Component {
     }
     componentWillMount() {
     }
-    viewDetail() {
-        let id = this.props.Seller.id
-        location.href = `#/Detail/${id}/goods`;
+
+
+    isShowSelectedCount(){
+        return (this.props.selectedCount!==null && this.props.selectedCount!==undefined && this.props.selectedCount>0) ;
     }
     render() {
         return (
-            <div className="SellerListOptions border-1px" onClick={(e) => { this.viewDetail() }}>
+            <div className="SellerListOptions border-1px">
+                <NavLink to={'/Detail/'+this.props.Seller.id+'/goods'}>
                 <div className="options-wrapper">
                     <div className="left-content">
                         <div className="image">
                             <img width="100%" height="100%" src={this.props.Seller.icon}></img>
-                            {(this.props.selectedCount && this.props.selectedCount>0) && 
+                            {this.isShowSelectedCount() &&  
                                 <div className="selctedCount">
                                     {this.props.selectedCount}
                                 </div>
@@ -75,6 +78,7 @@ class SellerListOption extends React.Component {
                     </div>
 
                 </div>
+                </NavLink>
             </div>
         );
     }

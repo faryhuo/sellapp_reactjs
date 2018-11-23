@@ -4,7 +4,7 @@ import 'component/SellerDetailHeader/SellerDetailHeader.styl'
 
 import BulletinDetail from 'component/BulletinDetail/BulletinDetail.js'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
+import { NavLink } from 'react-router-dom';
 class SellerDetailHeader extends React.Component {
     constructor(props) {
         super(props);
@@ -30,16 +30,16 @@ class SellerDetailHeader extends React.Component {
     componentWillMount() {
     }
 
-    goHome() {
-        location.href = "#/SellerList/home";
-    }
+ 
 
     render() {
         return (
-            <div className="SellerDetailHeader">
-                <div className="back-btn" onClick={(e) => { this.goHome() }}>
-                    <i className="material-icons">chevron_left</i>
-                </div>
+            <div className="SellerDetailHeader ">
+                <NavLink to="/SellerList/home" >
+                    <div className="back-btn" >
+                        <i className="material-icons">chevron_left</i>
+                    </div>
+                </NavLink>
                 <div className="content-wrapper">
                     <div className="avatar">
                         <img src={this.seller.icon} width="64" height="64" alt="" />
