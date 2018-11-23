@@ -1,3 +1,9 @@
+
+##项目demo
+![Alt text](./resource/ER_Chart_1.png)
+
+url: http://www.faryhuo.com/sellapp
+
 ## 环境依赖:
 ```
 安装 nodejs v6.12.3版本
