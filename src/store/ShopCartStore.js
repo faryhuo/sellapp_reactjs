@@ -24,7 +24,7 @@ class ShopCartStore {
   @action
   addFood(food){
     let isHasSelected= this.selectedFoods.filter((item)=>{
-      return item.name==food.name;
+      return item==food;
     }).length
     if(!isHasSelected){
       food.count=1;
