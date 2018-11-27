@@ -27,17 +27,47 @@ class ShopCartStore {
       return item==food;
     }).length
     if(!isHasSelected){
-      food.count=1;
-      this.selectedFoods.push(food);
+      let sameFood= this.selectedFoods.filter((item)=>{
+        return item.name==food.name;
+      });
+      if(sameFood.length){
+        food.count=sameFood[0].count;
+        food.count++;
+        for(let i=0;i<this.selectedFoods.length;i++){
+          if(this.selectedFoods[i].name==food.name){
+            this.selectedFoods[i]=food;
+          }
+
+        }      
+      }else{
+        food.count=1;
+        this.selectedFoods.push(food);
+      }
     }else{
       food.count++;
     }
     console.log(this.selectedFoods)
   }
 
+
   @action
   decreaseFood(food){
     if(!food.count || food.count===0){
+      let sameFood= this.selectedFoods.filter((item)=>{
+        return item.name==food.name;
+      });
+      if(sameFood.length){
+        food.count=sameFood[0].count;
+        if( food.count>0){
+        food.count--;
+        }
+        for(let i=0;i<this.selectedFoods.length;i++){
+          if(this.selectedFoods[i].name==food.name){
+            this.selectedFoods[i]=food;
+          }
+
+        }      
+      }
       return
     }
     food.count--;

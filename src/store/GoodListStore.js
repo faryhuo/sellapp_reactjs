@@ -1091,6 +1091,27 @@ class GoodListStore{
 
   }
 
+
+  getFood(name,type){
+    let food;
+    let goods=this.goods;
+    for(let i=0;i<goods.length;i++){
+       if(type){
+          if(goods[i].type!=type){
+              continue;
+          }
+       }
+       let foods=goods[i].foods;
+       for(let j=0;j<foods.length;j++){
+        if(foods[j].name==name){
+          food=foods[j];
+          break;
+        }
+       }
+    }
+    return food;
+  }
+
   @observable
   isShowDetailPage=false;
 

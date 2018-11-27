@@ -32,16 +32,31 @@ class OrderList extends React.Component{
         let id=Order.seller.id;
         let dataSource=GlobalObject["dataSource"];
         let localStore = dataSource["SellerDetail__" + id];
+        let goods=[];
+        let shopCartStore;
+        let goodListStore;
         if (!localStore) {
-            let shopCartStore = new ShopCartStore();
-            let goodListStore=new GoodListStore();
-            shopCartStore.initSelectedFoods(Order.goods)
+             shopCartStore = new ShopCartStore();
+             goodListStore=new GoodListStore();
+            for(let i=0;i<Order.goods.length;i++){
+               let food=goodListStore.getFood(Order.goods[i].name);
+               if(food){
+                shopCartStore.addFood(food)
+               }
+            }
 
             dataSource["SellerDetail__" + id] =
                 { goodListStore: goodListStore, shopCartStore: shopCartStore };
         } else {
-            let shopCartStore = localStore.shopCartStore;
-            shopCartStore.initSelectedFoods(Order.goods)
+             shopCartStore = localStore.shopCartStore;
+             goodListStore=localStore.goodListStore;
+             shopCartStore.clearFood();
+             for(let i=0;i<Order.goods.length;i++){
+                let food=goodListStore.getFood(Order.goods[i].name);
+                if(food){
+                 shopCartStore.addFood(food)
+                }
+            }
 
         }
         location.href=`#/Detail/${id}/goods`
